@@ -15,16 +15,41 @@
 
     <header>
       <% if user_signed_in? %>
+        
         <li>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </li>
+        <li>
+          <%= link_to books_path do %>
+            Book
+          <% end %>
+        </li>
+        <li>
+          <%= link_to users_path do %>
+            User
+          <% end %>
+        </li>
+        
+
       <% else %>
+
         <li>
           <%= link_to "新規登録", new_user_registration_path %>
         </li>
         <li>
           <%= link_to "ログイン", new_user_session_path %>
         </li>
+        <li>
+          <%= link_to root_path do %>
+            Home
+          <% end %>
+        </li>
+        <li>
+          <%= link_to about_path do %>
+            About
+          <% end %>
+        </li>
+
       <% end %>
     </header>
 

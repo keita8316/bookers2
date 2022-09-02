@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  get 'users/show'
+  get 'users/edit'
 
   resources :books
+  resources :users
 
   root to: "homes#top"
   get '/about', to: 'homes#about', as: 'about'
