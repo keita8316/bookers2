@@ -8,6 +8,10 @@
         <th>
             Body
         </th>
+        <th>
+        </th>
+        <th>
+        </th>
     </tr>
 
 
@@ -19,6 +23,16 @@
             </td>
             <td>
                 <%= book.body %>
+            </td>
+            <td>
+                <%= link_to book_path(book) do %>
+                    show
+                <% end %>
+            </td>
+            <td>
+                <%= link_to book_path(book), turbo_method: :delete do %>
+                    destroy
+                <% end %>
             </td>
         </tr>
 

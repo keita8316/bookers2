@@ -1,2 +1,43 @@
 <h1>Books#show</h1>
 <p>Find me in app/views/books/show.html.erb</p>
+
+<table>
+
+    <tr>
+        <th>
+            Tilte
+        </th>
+        <th>
+            Body
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+    </tr>
+
+
+    
+        
+        <tr>
+            <td>
+                <%= @book.title %>
+            </td>
+            <td>
+                <%= @book.body %>
+            </td>
+            <td>
+                <%= link_to edit_book_path(@book) do %>
+                    edit
+                <% end %>
+            </td>
+            <td>
+                <%= link_to book_path(@book), data: { turbo_method: :delete } do %>
+                    destroy
+                <% end %>
+            </td>
+        </tr>
+
+    
+
+</table>
