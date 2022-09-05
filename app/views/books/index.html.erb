@@ -30,7 +30,7 @@
                 <% end %>
             </td>
             <td>
-                <%= link_to book_path(book), turbo_method: :delete do %>
+                <%= button_to book_path(book), method: :delete do %>
                     destroy
                 <% end %>
             </td>
