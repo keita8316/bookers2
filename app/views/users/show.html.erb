@@ -4,4 +4,13 @@
 <div>
     <h3><%= @user.name %></h3>
     <%= image_tag @user.get_profile_image(100,100) %>
+</div>
+<div>
+    <% @books.each do |book| %>
+        title<br>
+        <%= book.title %>
+        body<br>
+        <%= book.body %>
+    <% end %>
+</div>
     
