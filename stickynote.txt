@@ -1,0 +1,6 @@
+ImageMagickを入れたときの苦戦
+・対応していないためrailsのほうで対応させる
+→https://teratail.com/questions/338293?link=qa_related_sp
+・色々見た結果環境のほうに必要なものが入っていなかった
+→https://pentan.info/server/linux/imagemagick_dnf_install.html
+・yumで一発でインストールできず、phpやそのほかファイルを入れる二つ目url参照
