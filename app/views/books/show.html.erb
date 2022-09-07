@@ -27,7 +27,7 @@
                 <%= @book.body %>
             </td>
             <td>
-                <%= button_to edit_book_path(@book) do %>
+                <%= button_to edit_book_path(@book), method: :get do %>
                     edit
                 <% end %>
             </td>
