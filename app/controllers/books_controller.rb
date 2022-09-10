@@ -6,6 +6,7 @@ class BooksController < ApplicationController
   def index
     @book = Book.new
     @books = Book.all
+    @user = current_user
   end
 
   def show
@@ -18,7 +19,7 @@ class BooksController < ApplicationController
     @book.user_id = current_user.id
 
     if @book.save   
-      redirect_to books_path
+      redirect_to book_path(@book)
     else
       @books = Book.all
       render :index
